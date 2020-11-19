@@ -81,8 +81,6 @@ namespace FactorialCalc
             number = topNum / botNum;
 
             xCombinationAnswer.Text = number.ToString();
-
-
         }
 
         // Returns any number's factorial
