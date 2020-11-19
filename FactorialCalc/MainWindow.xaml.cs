@@ -58,12 +58,9 @@ namespace FactorialCalc
             //TODO: Write Formulate to out put the permutation of 2 numbers. Be sure to utilize the code from the Factorial() above to help you solve the problem. 
             double n = Convert.ToDouble(xNObjects.Text);
             double r = Convert.ToDouble(xRSample.Text);
-            double topNum, botNum, number;
+            double number;
 
-            topNum = CalculateFactorial(n);
-            botNum = CalculateFactorial(n - r);
-
-            number = topNum / botNum;
+            number = CalculateFactorial(n) / CalculateFactorial(n - r);
 
             xPermutationAnswer.Text = number.ToString();
         }
@@ -73,12 +70,9 @@ namespace FactorialCalc
             //TODO: Write Formulate to out put the combination of 2 numbers. Be sure to utilize the code from the Factorial() above to help you solve the problem.
             double n = Convert.ToDouble(xNObjects.Text);
             double r = Convert.ToDouble(xRSample.Text);
-            double topNum, botNum, number;
+            double number;
 
-            topNum = CalculateFactorial(n);
-            botNum = CalculateFactorial(r) * CalculateFactorial(n - r);
-
-            number = topNum / botNum;
+            number = CalculateFactorial(n) / (CalculateFactorial(r) * CalculateFactorial(n - r));
 
             xCombinationAnswer.Text = number.ToString();
         }
